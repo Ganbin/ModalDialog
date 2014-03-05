@@ -10,7 +10,7 @@ Hide Widget On Load : Hide the widget on the load of the page (true by default [
 
 ### Methods
 
-displayDialog() : Display the dialog widget in the center of your page
+openDialog() : Display the dialog widget in the center of your page
 
 closeDialog() : Close the dialog.
 

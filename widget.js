@@ -4,18 +4,25 @@ WAF.define('ModalDialog', ['waf-core/widget'], function(widget) {
         init: function() {
 			this._initCloseButton();
 			this._initFadeDiv();
+			
 //            /* Define a custom event */
 //            this.fire('myEvent', {
 //                message: 'Hello'
 //            });
+
         },
         
+        
+        //Function who create the fade div to have a black window behind the modal dialog widget
+        // Initialy this div don't do nothing until we open the modal dialog widget
         _initFadeDiv: function(){
         	var fadeDiv = $("<div>"); //HTML tag
 			fadeDiv.attr('id','fadeForModalDialog'); // ID that links to the widget constructor ID
 			$('body').append(fadeDiv);
         },
         
+        
+        //Function who create the close button
         _initCloseButton: function(){
         	var buttonElement = $("<button>"); //HTML tag
 			buttonElement.attr('id',this.id+'-closeDialogButton'); // ID that links to the widget constructor ID
@@ -33,12 +40,15 @@ WAF.define('ModalDialog', ['waf-core/widget'], function(widget) {
 			});
         },
         
-        displayDialog:function(){
+        
+        // openDialog method : Open the modal dialog widget in the front and in the middle of the application
+        openDialog:function(){
         	this.show();
 			$('#'+this.id).addClass('centerModal');
 			$('#fadeForModalDialog').addClass('fadeModal');
         },
         
+        // closeDialog : close the modal dialog widget
         closeDialog:function(){
         	this.hide();
 			$('#'+this.id).removeClass('centerModal');

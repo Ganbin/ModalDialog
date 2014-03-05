@@ -9,26 +9,36 @@
 	border-radius: 12px;
 }
 
+/*
+Properties for the fade div to have the full window black behind the modal dialog widget
+*/
 .fadeModal{
-	position: fixed; left: 0; top: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
 	background: #000;
 	width: 100%;
 	height: 100%;
 	opacity: .80;
-	z-index: 9999;
+	z-index: 1000000000;
 }
 
+/*
+Properties for the modal dialog to be centered in the middle of the page and to never be bigger the page
+the !important statement is to prevent override of the properties
+*/
 .centerModal{
-	margin: auto;
-    width: 100%;
-    height : 100%;
-    max-width:90%;
-    max-height:90%;
-    right: 0px;
+	margin: auto !important;
+    
+    max-width:90%; /*Don't allow the width to be bigger than the page, 90% is to have a small margin*/
+    max-height:90%; /*Don't allow the height to be bigger than the page, 90% is to have a small margin*/
+    
+    right: 0px !important;
     left: 0px !important;
+    
     top:0px !important;
     bottom : 0px !important;
-    z-index:99999 !important;
+    z-index:1000000001 !important;
 }
 
 .modalDialogButton{
