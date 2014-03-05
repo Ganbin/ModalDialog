@@ -12,7 +12,8 @@
 .fadeModal{
 	position: fixed; left: 0; top: 0;
 	background: #000;
-	width: 100%; height: 100%;
+	width: 100%;
+	height: 100%;
 	opacity: .80;
 	z-index: 9999;
 }
@@ -21,6 +22,8 @@
 	margin: auto;
     width: 100%;
     height : 100%;
+    max-width:90%;
+    max-height:90%;
     right: 0px;
     left: 0px !important;
     top:0px !important;
