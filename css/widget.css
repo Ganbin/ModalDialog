@@ -1,0 +1,42 @@
+.waf-widget.waf-modaldialog {
+
+	background-color:white;
+	
+	border: 3px solid dodgerblue;
+	
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.fadeModal{
+	position: fixed; left: 0; top: 0;
+	background: #000;
+	width: 100%; height: 100%;
+	opacity: .80;
+	z-index: 9999;
+}
+
+.centerModal{
+	margin: auto;
+    width: 100%;
+    height : 100%;
+    right: 0px;
+    left: 0px !important;
+    top:0px !important;
+    bottom : 0px !important;
+    z-index:99999 !important;
+}
+
+.modalDialogButton{
+	position:absolute;
+	width:24px;
+	height:24px;
+	right:-24px;
+	top:-24px;
+		
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	
+}
