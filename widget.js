@@ -1,10 +1,13 @@
 WAF.define('ModalDialog', ['waf-core/widget'], function(widget) {
 	
+	
+	
     var ModalDialog = widget.create('ModalDialog', {
         init: function() {
 			this._initCloseButton();
 			this._initFadeDiv();
 			this.hide(); // Hide widget on load
+			
 			
 //            /* Define a custom event */
 //            this.fire('myEvent', {

@@ -1,9 +1,9 @@
 .waf-widget.waf-modaldialog {
 
 	background-color:white;
-	
+
 	border: 3px solid dodgerblue;
-	
+
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
@@ -29,16 +29,15 @@ the !important statement is to prevent override of the properties
 */
 .centerModal{
 	margin: auto !important;
-    
-    max-width:90%; /*Don't allow the width to be bigger than the page, 90% is to have a small margin*/
-    max-height:90%; /*Don't allow the height to be bigger than the page, 90% is to have a small margin*/
-    
-    right: 0px !important;
-    left: 0px !important;
-    
-    top:0px !important;
-    bottom : 0px !important;
-    z-index:1000000001 !important;
+	max-width:90%; /*Don't allow the width to be bigger than the page, 90% is to have a small margin*/
+	max-height:90%; /*Don't allow the height to be bigger than the page, 90% is to have a small margin*/
+
+	right: 0px !important;
+	left: 0px !important;
+
+	top:0px !important;
+	bottom : 0px !important;
+	z-index:1000000001 !important;
 }
 
 .modalDialogButton{
@@ -51,5 +50,4 @@ the !important statement is to prevent override of the properties
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
-	
 }

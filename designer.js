@@ -7,11 +7,9 @@
 //    /* Define custom event for your widget */
 //    ModalDialog.addEvent('myEvent');
 
-//    /* Customize existing properties */
-//    ModalDialog.customizeProperty('test', {
-//        sourceTitle: 'Test Source',
-//        title: 'Test Static Value',
-//        description: 'Add a datasource to this property.'
+    /* Customize existing properties */
+//    ModalDialog.customizeProperty('textInput-data-hideonload', {
+//    	display:true
 //    });
 
 //    /* Add a Label property */
@@ -35,7 +33,6 @@
 
     /* Override widget's initialization */
     ModalDialog.prototype.init = function() {
-    
     }
 
 });
