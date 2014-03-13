@@ -3,7 +3,7 @@
     "studioName": "Modal Dialog",
     "category": "Custom Widgets",
     "iconPath": "/icons/widget.png",
-    "author": "Widget Developer",
+    "author": "Gabriel Inzirillo",
     "contributors": [
         "Gabriel Inzirillo"
     ],
@@ -11,7 +11,7 @@
     "copyright": "(c) 2014 Widget Developer",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ganbin/modalDialog.git"
+        "url": "https://github.com/ganbin/ModalDialog.git"
     },
     "keywords": ["wakanda", "widget","modal","dialog","ModalDialog"],
     "engines": {"wakanda": ">= 8"},
