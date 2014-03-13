@@ -2,17 +2,24 @@
 The Modal Dialog widget allows you to have a simple modal dialog box loaded in the center of your window.
 
 ### Properties
-This widget has the following properties:
+- ID : ID of the widget
+- Hide Widget On Load : Hide the widget on the load of the page (true by default : the checkbox is not checked in the GUI Designer but the modal dialog is hide in the code at runtime).
+- Text : The text displayed in the modal dialog
+- Title : The title of the modal dialog
 
-ID : ID of the widget
-
-Hide Widget On Load : Hide the widget on the load of the page (true by default [IN PROGRESS] )
+### Event
+*Validation Button :*
+- On Click : This event allow you to have your own code when the validation button is clicked
 
 ### Methods
+- openDialog() : Display the dialog widget in the center of your page
+- closeDialog() : Close the dialog.
 
-openDialog() : Display the dialog widget in the center of your page
 
-closeDialog() : Close the dialog.
+###Default Style
+![Default Style](tutorial/img/defaultStyle.png)
+
+You can define your how style in the css/widget.css file
 
 ### More Information
 For more information on how to install a custom widget, refer to [Installing a Custom Widget](http://doc.wakanda.org/WakandaStudio0/help/Title/en/page3869.html#1027761).
