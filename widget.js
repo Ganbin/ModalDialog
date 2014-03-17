@@ -66,15 +66,6 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
 			$("#fadeForModalDialog").remove(); // remove the fade element from the DOM
         },
         
-        /*Function that allow to set the text of the modal dialog
-         * Accessible via $$('modalDialogID').setText('My Text');
-         */
-        setText:function(text){
-        	if(text != null){
-        		this.node.children[1].innerText = text;
-        	}
-        },
-        
         /*Function that allow to set the title of the modal dialog
          * Accessible via $$('modalDialogID').setTitle('My Title');
          */
@@ -84,15 +75,14 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
         	}
         },
         
-        /* Add the text property allow you to set the text directly in the GUI Designer in the property panel */
-        text: widget.property({
-		    type: 'string',
-		    defaultValue: 'My Text',
-		    bindable:false,
-		    onChange : function(){
-		    	this.node.children[1].innerText = this.text(); // Set the text in the GUI Designer when you change a value
-		    }
-		}),
+        /*Function that allow to set the text of the modal dialog
+         * Accessible via $$('modalDialogID').setText('My Text');
+         */
+        setText:function(text){
+        	if(text != null){
+        		this.node.children[1].innerText = text;
+        	}
+        },
         
         /* Add the title property allow you to set the title directly in the GUI Designer in the property panel */
         title: widget.property({
@@ -101,6 +91,16 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
 		    bindable:false,
 		    onChange : function(){
 		    	this.node.children[0].children[0].innerText = this.title(); // Set the title in the GUI Designer when you change a value
+		    }
+		}),
+		
+		/* Add the text property allow you to set the text directly in the GUI Designer in the property panel */
+        text: widget.property({
+		    type: 'string',
+		    defaultValue: 'My Text',
+		    bindable:false,
+		    onChange : function(){
+		    	this.node.children[1].innerText = this.text(); // Set the text in the GUI Designer when you change a value
 		    }
 		})
     });
