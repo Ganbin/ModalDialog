@@ -12,6 +12,7 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
 			'<div id="'+this.id+'-footer" class="modalDialogFooter"><button id="'+this.id+'-cancelDialogButton" class="modalDialogCancelButton">Cancel</button><button id="'+this.id+'-validDialogButton" class="modalDialogValidButton">Valid</button></div>';
 			this._initTitle(); // Initialize the title
 			this._initText(); // Initialize the text
+			this._initValidButtonText(); // Initialize the validation button text
 			this._initCloseButtonEvent(); // Initialize the close button onClick event to close the modal dialog
 			this._initCancelButtonEvent(); // Initialize the cancel button onClick event to close the modal dialog
 			this.hide(); // Hide widget on load
@@ -36,12 +37,17 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
         
         /* Initialization of the title at runtime */
         _initTitle: function(){
-        	$('#'+this.id+'-main').append(this.text());
+        	$('#'+this.id+'-main').text(this.text());
         },
         
         /* Initialization of the text at runtime */
         _initText: function(){
-        	$('#'+this.id+'-title').append(this.title());
+        	$('#'+this.id+'-title').text(this.title());
+        },
+        
+        /* Initialization of the valid Button Text at runtime */
+        _initValidButtonText: function(){
+        	$('#'+this.id+'-validDialogButton').text(this.validButtonText());
         },
         
         
@@ -71,7 +77,7 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
          */
         setTitle:function(title){
         	if(title != null){
-        		this.node.children[0].children[0].innerText = title;
+        		this.node.children[0].children[0].textContent = title;
         	}
         },
         
@@ -80,7 +86,7 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
          */
         setText:function(text){
         	if(text != null){
-        		this.node.children[1].innerText = text;
+        		this.node.children[1].textContent = text;
         	}
         },
         
@@ -90,7 +96,7 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
 		    defaultValue: 'My Title',
 		    bindable:false,
 		    onChange : function(){
-		    	this.node.children[0].children[0].innerText = this.title(); // Set the title in the GUI Designer when you change a value
+		    	this.node.children[0].children[0].textContent = this.title(); // Set the title in the GUI Designer when you change a value
 		    }
 		}),
 		
@@ -100,7 +106,23 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
 		    defaultValue: 'My Text',
 		    bindable:false,
 		    onChange : function(){
-		    	this.node.children[1].innerText = this.text(); // Set the text in the GUI Designer when you change a value
+		    	this.node.children[1].textContent = this.text(); // Set the text in the GUI Designer when you change a value
+		    }
+		}),
+		
+		/* Add the validButtonText property allow you to set the text for the valid button directly in the GUI Designer in the property panel */
+        validButtonText: widget.property({
+		    type: 'enum',
+		    "values": {
+		        Valid: "Valid",
+		        Accept: "Accept",
+		        Agree: "Agree",
+		    	OK: "OK",
+		    	Yes:"Yes"
+		    },
+		    bindable:false,
+		    onChange : function(){
+		    	this.node.children[2].children[1].textContent = this.validButtonText(); // Set the text in the GUI Designer when you change a value
 		    }
 		})
     });

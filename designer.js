@@ -24,11 +24,15 @@
     /* Add the title for the 2 property */
     
     ModalDialog.customizeProperty('title', {
-	    sourceTitle: 'Title'
+	    title: 'Title'
 	});
 	
 	ModalDialog.customizeProperty('text', {
-	    sourceTitle: 'Text'
+	    title: 'Text'
+	});
+	
+	ModalDialog.customizeProperty('validButtonText', {
+	    title: 'Validation Button Text'
 	});
 	
 	/* Add the onClick event for the validation button in the GUI event panel*/
@@ -54,8 +58,9 @@
 		/*
 		* This is to set the title and the text for the initialization in the GUI Designer
 		*/
-		$('#'+this.id+'-main').append(this.text());
-		$('#'+this.id+'-title').append(this.title());
+		$('#'+this.id+'-main').text(this.text());
+		$('#'+this.id+'-title').text(this.title());
+		$('#'+this.id+'-validDialogButton').text(this.validButtonText());
 	}
 
 });
