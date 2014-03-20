@@ -4,15 +4,16 @@ The Modal Dialog widget allows you to have a simple modal dialog box loaded in t
 ### Properties
 - ID : ID of the widget
 - Hide Widget On Load : Hide the widget on the load of the page (true by default : the checkbox is not checked in the GUI Designer but the modal dialog is hide in the code at runtime).
-- Text : The text displayed in the modal dialog
-- Title : The title of the modal dialog
+- Text : The text displayed in the modal dialog.
+- Title : The title of the modal dialog.
+- Validation Button Text : The text displaying in the validation button (Valid, Accept, Agree, Ok, Yes).
 
 ### Event
 *Validation Button :*
 - On Click : This event allow you to have your own code when the validation button is clicked
 
 ### Methods
-- openDialog() : Display the dialog widget in the center of your page
+- openDialog() : Display the dialog widget in the center of your page.
 - closeDialog() : Close the dialog.
 
 
