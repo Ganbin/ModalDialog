@@ -58,8 +58,9 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
         	var fadeDiv = $("<div>");
 			fadeDiv.attr('id','fadeForModalDialog');
 			fadeDiv.attr('class','fadeModal');
-			$(this.node.parentElement).append(fadeDiv); // append to the parent to be sure that the fade is always under the modalDialog
-        	
+			$('body').append(fadeDiv); // Show the fade at the top DOM level
+			$('body').append(this.node); // Put the modal Dialog at the top DOM level (This is to be sure the modal dialog is on top of all other at runtime, no matter where you put it in the designer)
+			
         	this.show(); // Show the modal Dialog
         	
 			$('#'+this.id).addClass('centerModal'); // Add the class to center the modal dialog
