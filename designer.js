@@ -7,7 +7,7 @@
     /* Set the Design and Styles panels 
      * Only drop shadow is activate
      * I wait for the Wakanda V9 where we can have 
-	 * more complex structure for our custom widget
+    * more complex structure for our custom widget
     */
     ModalDialog.setPanelStyle({
         'fClass': false,
@@ -23,28 +23,29 @@
     
     /* Add the title for the 2 property */
 
-	
-	ModalDialog.customizeProperty('validButtonText', {
-	    title: 'Validation Button Text'
-	});
-	
-	/* Add the onClick event for the validation button in the GUI event panel*/
-	ModalDialog.addEvent({
-	    'name':'onValidClick',
-	    'description':'On Click',
-	    'category':'Validation Button'
-	});
-	
-	/* remove the change event added by default when we add a property */
-	ModalDialog.removeEvent('change');
+    ModalDialog.customizeProperty('validButtonText', {
+        title: 'Validation Button Text'
+    });
+
+    /* Add the onClick event for the validation button in the GUI event panel*/
+    ModalDialog.addEvent({
+        'name':'onValidClick',
+        'description':'On Click',
+        'category':'Validation Button'
+    });
+
+    /* remove the change event added by default when we add a property */
+    ModalDialog.removeEvent('change');
 
     /* Override widget's initialization
      * Create the html tag to have the same look in the GUI Designer.
      *
      */
-	ModalDialog.doAfter('init', function() {
-		this.show();
-    	});
+    ModalDialog.doAfter('init', function() {
+        this.show();
+    });
     
 
 });
+
+// For more information, refer to http://doc.wakanda.org/Wakanda0.DevBranch/help/Title/en/page3870.html
