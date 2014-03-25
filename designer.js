@@ -44,8 +44,7 @@
      */
 	ModalDialog.doAfter('init', function() {
 		this.show();
-    });
+    	});
     
-//    data-hideonload="true"
 
 });
