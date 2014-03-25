@@ -22,14 +22,7 @@
     });
     
     /* Add the title for the 2 property */
-    
-    ModalDialog.customizeProperty('title', {
-	    title: 'Title'
-	});
-	
-	ModalDialog.customizeProperty('text', {
-	    title: 'Text'
-	});
+
 	
 	ModalDialog.customizeProperty('validButtonText', {
 	    title: 'Validation Button Text'
@@ -49,20 +42,10 @@
      * Create the html tag to have the same look in the GUI Designer.
      *
      */
-    ModalDialog.prototype.init = function() {
-  		
-		this.node.innerHTML = '<div id="'+this.id+'-header" class="modalDialogHeader"><div id="'+this.id+'-title" class="modalDialogTitle"></div><button id="'+this.id+'-closeDialogButton" class="modalDialogCloseButton"></button></div>'+
-			'<div id="'+this.id+'-main" class="modalDialogMain"></div>'+
-			'<div id="'+this.id+'-footer" class="modalDialogFooter"><button id="'+this.id+'-cancelDialogButton" class="modalDialogCancelButton">Cancel</button><button id="'+this.id+'-validDialogButton" class="modalDialogValidButton">Valid</button></div>';
-		
-		/*
-		* This is to set the title and the text for the initialization in the GUI Designer
-		*/
-		$('#'+this.id+'-main').text(this.text());
-		$('#'+this.id+'-title').text(this.title());
-		$('#'+this.id+'-validDialogButton').text(this.validButtonText());
-	}
+	ModalDialog.doAfter('init', function() {
+		this.show();
+    });
+    
+//    data-hideonload="true"
 
 });
-
-// For more information, refer to http://doc.wakanda.org/Wakanda0.DevBranch/help/Title/en/page3870.html
