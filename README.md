@@ -15,6 +15,8 @@ The Modal Dialog widget allows you to have a simple modal dialog box loaded in t
 ### Methods
 - openDialog() : Display the dialog widget in the center of your page.
 - closeDialog() : Close the dialog.
+- setTitle(value) : Set the title value.
+- setText(value) : Set the text displayed in the widget.
 
 
 ###Default Style
