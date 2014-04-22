@@ -125,7 +125,7 @@ the !important statement is to prevent override of the properties
 	font-weight:bold;
 	position:absolute;
 	height : 24px;
-	width:350px;
+	width:calc(100%-30px);
 	top:8px;
 	left:8px;
 	font-family: 'Lucida grande', 'Segoe UI', Tahoma, sans-serif;

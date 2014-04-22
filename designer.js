@@ -12,8 +12,8 @@
     ModalDialog.setPanelStyle({
         'fClass': false,
         'text': false,
-        'background': false,
-        'border': false,
+        'background': true,
+        'border': true,
         'sizePosition': false,
         'label': false,
         'textShadow': false,
@@ -25,6 +25,10 @@
 
     ModalDialog.customizeProperty('validButtonText', {
         title: 'Validation Button Text'
+    });
+    
+    ModalDialog.customizeProperty('text', {
+	    multiline: true,
     });
 
     /* Add the onClick event for the validation button in the GUI event panel*/
