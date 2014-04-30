@@ -10,12 +10,12 @@ WAF.define('ModalDialog', [	'waf-core/widget'], function(widget) {
         	this.node.innerHTML = '<div id="'+this.id+'-header" class="modalDialogHeader"><div id="'+this.id+'-title" class="modalDialogTitle"></div><button id="'+this.id+'-closeDialogButton" class="modalDialogCloseButton"></button></div>'+
 			'<div id="'+this.id+'-main" class="modalDialogMain"></div>'+
 			'<div id="'+this.id+'-footer" class="modalDialogFooter"><button id="'+this.id+'-cancelDialogButton" class="modalDialogCancelButton">Cancel</button><button id="'+this.id+'-validDialogButton" class="modalDialogValidButton">Valid</button></div>';
-			this._initTitle(); // Initialize the title
-			this._initText(); // Initialize the text
-			this._initValidButtonText(); // Initialize the validation button text
-			this._initCloseButtonEvent(); // Initialize the close button onClick event to close the modal dialog
-			this._initCancelButtonEvent(); // Initialize the cancel button onClick event to close the modal dialog
-			this.hide(); // Hide widget on load
+		this._initTitle(); // Initialize the title
+		this._initText(); // Initialize the text
+		this._initValidButtonText(); // Initialize the validation button text
+		this._initCloseButtonEvent(); // Initialize the close button onClick event to close the modal dialog
+		this._initCancelButtonEvent(); // Initialize the cancel button onClick event to close the modal dialog
+		this.hide(); // Hide widget on load
 
         },
         
